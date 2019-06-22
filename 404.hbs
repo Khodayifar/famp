@@ -1,0 +1,27 @@
+{{> head}}
+<main class=wrap-page>
+   <article class=card>
+      <center class="card-text">
+         <header>
+            <div>
+               <h1>404</h1>
+               <p>برگه پیدا نشد</p>
+            </div>
+         </header>
+      </center>
+      <center class="card-text">
+         <p>برگه مورد نظر شما پیدا نشد. می‌توانید به <a href="{{@website.url}}">صفحه نخست</a> بروید یا از جستجو استفاده کنید.</p>
+      </center>
+    <div class=card-text>
+      <form method="GET" action="https://www.google.com/cse" target="_top">
+        <div class="ampstart-input inline-block relative mb3">
+          <input name="cx" type="hidden" value="{{@config.custom.searchId}}" />
+          <input name="ie" type="hidden" value="UTF-8" />
+          <center><input class=search-input type="search" placeholder="جستجو..." name="q" required></center>
+          <center><input type="submit" value="جستجو"></center>
+        </div>
+      </form>
+   </div>
+   </article>
+</main>
+{{> footer}}

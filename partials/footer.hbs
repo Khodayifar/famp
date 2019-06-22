@@ -1,0 +1,23 @@
+<footer class=bottom>{{{@config.custom.copyrightText}}}</footer>
+{{> menu menus.mainMenu}}
+{{#if @amp.GAID}}
+<amp-analytics type=googleanalytics id=analytics1>
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "{{@amp.GAID}}"
+            },
+            "triggers": {
+                "trackPageview": {
+                    "on": "visible",
+                    "request": "pageview"
+                }
+            }
+        }
+    </script>
+</amp-analytics>
+{{/if}}
+{{{@footerCustomCode}}}
+{{{ publiiFooter }}}
+</body>
+</html>
